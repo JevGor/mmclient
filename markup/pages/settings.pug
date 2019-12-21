@@ -1,0 +1,189 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+    
+    .wrapper
+      .content
+        .el.el--mb35
+          header.page-header
+            .page-header__content
+              .container
+                .page-header__content.page-header__content--body
+                  .page-header__content-arrow
+                    a.arrow(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+                  h2.text.text--white24 Account Settings
+        main.page-content.el.el--mb30
+          nav.menu.menu--hidden
+            .el.el--mb35
+              .menu__head
+                span.menu__exit
+                .menu__head-title
+                  h2.text.text--white20 Indy Sports
+                    span.menu__head-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-head-icon', className: 'menu-head-icon'})
+            ul.menu__list
+              li.menu__items
+                a.text.text--blueLight18(href="wallet.html") Wallet
+              li.menu__items
+                a.text.text--blueLight18(href="referal.html") Referal
+              li.menu__items
+                a.text.text--blueLight18(href="corporate.html") Corporate
+              li.menu__items
+                a.text.text--blueLight18(href="settings.html") Settings
+              li.menu__items
+                a.text.text--blueLight18(href="faq.html") FAQ
+              li.menu__items.menu__items--logout
+                a.button.button--red.text.text--red16.text--uppercase.text--center(href="#") Log out
+                
+          .settings
+            .container
+              .el.el--mb20
+                .settings__user-config-row
+                  .row.row--ai-c
+                    .settings__user-avatar
+                    .settings__user-name
+                      .el.el--mb5
+                        p.text.text--blueDark14 Joki
+                      p.text.text--grey14 Lorem ipsum
+                    .settings__user-arrow
+                      != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+              
+              .el.el--mb20
+                .settings__user-config.settings__user-config--hidden
+                  form(action="action.php")
+                    .el.el--mb5
+                      .row.row--ai-c
+                        .settings__user-config-icon
+                          != pugHelpers.Icon.call(locals, {iconName: 'settings-icon', className: 'settings-icon'})
+                        .settings__user-config-inputWrap
+                          input.settings__user-config-input(type="text" name="name" value="Alex Alexi" disabled)
+                        span.settings__user-config-exit-edit.settings__user-config-exit-edit--hidden
+                    .el.el--mb5
+                      .row.row--ai-c
+                        .settings__user-config-icon
+                          != pugHelpers.Icon.call(locals, {iconName: 'settings-icon', className: 'settings-icon'})
+                        .settings__user-config-inputWrap.settings__user-config-inputWrap--fixed
+                          input.settings__user-config-input(type="tel" name="tel" value="8(800) 000-00-00" disabled)
+                        span.settings__user-config-exit-edit.settings__user-config-exit-edit--hidden
+                    .el.el--mb20
+                      .row.row--ai-c
+                        .settings__user-config-icon
+                          != pugHelpers.Icon.call(locals, {iconName: 'settings-icon', className: 'settings-icon'})
+                        .settings__user-config-inputWrap.settings__user-config-inputWrap--fixed
+                          input.settings__user-config-input(type="email" name="mail" value="Alea122@mail.re" disabled)
+                        span.settings__user-config-exit-edit.settings__user-config-exit-edit--hidden
+                    .row.row--jc-c
+                      .settings__user-config-button
+                        button.button.button--blue.text.text--blue14.text--uppercase(type="button") Save
+                        
+            .el.el--mb20          
+              .settings__address
+                .el.el--mb15
+                  .border
+                .el.el--mb15
+                  .container
+                    p.text.text--blueLight14 Addresses
+                .border
+                .settings__address-cart
+                  .container
+                    .row.row--ai-c
+                      span.settings__address-home-icon
+                        != pugHelpers.Icon.call(locals, {iconName: 'home', className: 'home'})
+                      .settings__user-name.row--grow
+                        .el.el--mb5
+                          p.text.text--blueDark14 Joki
+                        p.text.text--grey14 Lorem ipsum
+                        .settings__address-cart-description-text
+                          p.text.text--blueDark14 Inner Park Road
+                          p.text.text--blueDark14 44
+                          p.text.text--blueDark14 London
+                          span.settings__address-cart-description-text-cancel
+                      .settings__user-arrow
+                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+                .settings__address-cart
+                  .container
+                    .row.row--ai-c
+                      span.settings__address-home-icon
+                        != pugHelpers.Icon.call(locals, {iconName: 'work', className: 'work'})
+                      .settings__user-name.row--grow
+                        .el.el--mb5
+                          p.text.text--blueDark14 Joki
+                        p.text.text--grey14 Lorem ipsum
+                        .settings__address-cart-description-text
+                          p.text.text--blueDark14 Inner Park Road
+                          p.text.text--blueDark14 44
+                          p.text.text--blueDark14 London
+                          span.settings__address-cart-description-text-cancel
+                      .settings__user-arrow
+                        != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+                      
+            .settings__address-add
+              .container
+                .el.el--mb25
+                  .settings__address-add-address
+                    .row.row--ai-c
+                      span.settings__address-add-icon
+                      p.text.text--blueLight14.text--fw400 Add new address
+                      
+                .booking__order-address.booking__order-address--hidden
+                  .booking__order-address-items
+                    .row.row--ai-c
+                      .booking__order-address-label-wrap.el--resizeMr5
+                        label.text.text--blueDark18.text--fw400.text--noWrap.text--right(for="postCode") Post code
+                      .booking__order-address-input-wrap
+                        input.booking__order-address-input.text.text--blueDark18.text--fw400(type="text")#postCode
+                  .booking__order-address-items
+                    .row.row--ai-c
+                      .booking__order-address-label-wrap.el--resizeMr5
+                        label.text.text--blueDark18.text--fw400.text--noWrap.text--right(for="address") Address
+                      .booking__order-address-input-wrap
+                        input.booking__order-address-input.text.text--blueDark18.text--fw400(type="text")#address
+                  .booking__order-address-items
+                    .row.row--ai-c
+                      .booking__order-address-label-wrap.el--resizeMr5
+                        label.text.text--blueDark18.text--fw400.text--noWrap.text--right Preselected
+                      .booking__order-address-select-wrap
+                        span.booking__order-address-select-indicator
+                        select.booking__order-address-select.text.text--blueDark18.text--fw400
+                          option(value="1") Address 1
+                          option(value="2") Address 2
+                          option(value="3") Address 3
+                    
+                .settings__address-add-textarea-content.settings__address-add-textarea-content--hidden
+                  .el.el--mb20
+                    .settings__address-add-textareaWrap
+                      textarea.settings__address-add-textarea
+                  .row.row--jc-c
+                    .settings__user-config-button
+                      button.button.button--blue.text.text--blue14.text--uppercase(type="button") Add
+              
+        
+      footer.page-footer
+        .footer-content
+          .footer-content__description
+            .footer-content__description--body
+              .container
+                ul.nav
+                  li.nav__items
+                    a.nav__item.nav__item--newBooking(href="new-booking-start.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'new-booking', className: 'new-booking'})
+                  li.nav__items
+                    a.nav__item.nav__item--bookingList(href="booking-list.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'booking-list', className: 'booking-list'})
+                  li.nav__items
+                    a.nav__item.nav__item--message(href="messages.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'message-icon', className: 'message-icon'})
+                  li.nav__items
+                    a.nav__item.nav__item--menu(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-icon', className: 'menu-icon'})
+    
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -1,0 +1,138 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+    
+    .wrapper
+      .content
+        .el.el--mb20
+          header.page-header
+            .page-header__content
+              .container
+                .page-header__content.page-header__content--body
+                  .page-header__content-arrow
+                    a.arrow(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+                  h2.text.text--white24 Sat 15 July 2017
+        main.page-content.el.el--mb50
+          nav.menu.menu--hidden
+            .el.el--mb35
+              .menu__head
+                span.menu__exit
+                .menu__head-title
+                  h2.text.text--white20 Indy Sports
+                    span.menu__head-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-head-icon', className: 'menu-head-icon'})
+            ul.menu__list
+              li.menu__items
+                a.text.text--blueLight18(href="wallet.html") Wallet
+              li.menu__items
+                a.text.text--blueLight18(href="referal.html") Referal
+              li.menu__items
+                a.text.text--blueLight18(href="corporate.html") Corporate
+              li.menu__items
+                a.text.text--blueLight18(href="settings.html") Settings
+              li.menu__items
+                a.text.text--blueLight18(href="faq.html") FAQ
+              li.menu__items.menu__items--logout
+                a.button.button--red.text.text--red16.text--uppercase.text--center(href="#") Log out
+                
+          .booking
+            .container
+            
+              .booking__order-nav.el.el--mb30
+                .row.row--jc-c
+                  a.booking__order-nav-items.booking__order-nav-items--finish(href="new-booking-step1.html") 1
+                  a.booking__order-nav-items.booking__order-nav-items--finish(href="new-booking-step2.html") 2
+                  a.booking__order-nav-items.booking__order-nav-items--finish(href="new-booking-step3.html") 3
+                  a.booking__order-nav-items.booking__order-nav-items--active(href="new-booking-step4.html") 4 Therapist
+                  a.booking__order-nav-items(href="new-booking-step5.html") 5
+                  
+            .booking__order-therapist-filter
+              .container
+                .booking__order-therapist-filter-headlineWrap.el--mb10
+                  h2.booking__order-therapist-filter-headline.text.text--blueLight24.text--center Filters
+                    span.booking__order-therapist-filter-headline-indicator
+              .booking__order-therapist-filter-border
+              
+              .booking__order-therapist-filter-description.booking__order-therapist-filter-description--hidden
+                .container
+                  .row.row--jc-c
+                    .booking__order-therapist-filter-description-content
+                      .booking__order-therapist-filter-description-content-item
+                        .booking__order-therapist-filter-search-wrap.row
+                          .booking__order-therapist-filter-input-search-wrap.row--grow
+                            input.booking__order-therapist-filter-input-search(type="text" placeholder="Name")
+                          .booking__order-therapist-filter-input-search-idicator.row.row--jc-c.row--ai-c
+                            span.booking__order-therapist-filter-input-search-idicator-icon
+                              != pugHelpers.Icon.call(locals, {iconName: 'search', className: 'search'})
+                        .booking__order-therapist-filter-search-wrap.row.row--ai-c
+                          p.text.text--blueDark16.text--fw400.el--resizeMr12 Gender
+                          .booking__order-therapist-filter-select-wrap.row--grow
+                            span.booking__order-therapist-filter-select-indicator
+                            select.booking__order-therapist-filter-select.text.text--grey16
+                              option(value="1") All
+                        .booking__order-therapist-filter-search-wrap.row.row--ai-c
+                          p.text.text--blueDark16.text--fw400.el--resizeMr12 Rating:
+                          .booking__order-therapist-filter-raiting-wrap.row.row--jc-sb.row--grow
+                            - for (let i = 0; i < 4; i++)
+                              span.booking__order-therapist-filter-raiting-star-fill
+                                != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'star'})
+                            span.booking__order-therapist-filter-raiting-star-noFill  
+                              != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'star'})
+                      button.button.button--blue.button--bgc-white.text.text--blueLight18.text--fw400.text--center.el--mt30 My favourites
+                      
+            .booking__order-therapist-carts
+              .container
+                .row.row--jc-sa.row--wrap
+                  - for (let i = 0; i < 3; i++)
+                    .booking__order-therapist-cart.column.column--ai-c
+                      span.booking__order-therapist-cart-user.el--mb25
+                        img(src="%=static=%img/content/person.jpg")
+                      .row.row--jc-sb.el--mb20
+                        p.text.text--blueDark14 John Doe
+                        p.text.text--blueDark14.el--ml-a 4,7
+                        span.booking__order-therapist-cart-star.el--ml5
+                          != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'star'})
+                      .booking__order-therapist-cart-button
+                        a.button.button--blue.text.text--blueLight12.text--center.text--uppercase(href="#") Book
+                  
+                    .booking__order-therapist-cart.column.column--ai-c
+                      span.booking__order-therapist-cart-user.el--mb25
+                        img(src="%=static=%img/content/person.jpg")
+                      .row.row--jc-sb.el--mb20
+                        p.text.text--blueDark14 John Doe
+                        p.text.text--blueDark14.el--ml-a 4,7
+                        span.booking__order-therapist-cart-star.el--ml5
+                          != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'star'})
+                      .booking__order-therapist-cart-button
+                        a.button.button--blue.text.text--blueLight12.text--center.text--uppercase(href="#") Book
+                  
+        
+      footer.page-footer
+        .footer-content
+          .footer-content__description
+            .footer-content__description--body
+              .container
+                ul.nav
+                  li.nav__items
+                    a.nav__item.nav__item--newBooking(href="new-booking-start.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'new-booking', className: 'new-booking'})
+                  li.nav__items
+                    a.nav__item.nav__item--bookingList(href="booking-list.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'booking-list', className: 'booking-list'})
+                  li.nav__items
+                    a.nav__item.nav__item--message(href="messages.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'message-icon', className: 'message-icon'})
+                  li.nav__items
+                    a.nav__item.nav__item--menu(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-icon', className: 'menu-icon'})
+    
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

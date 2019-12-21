@@ -1,0 +1,74 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+    
+    .wrapper
+      .content.content--newBooking
+        .el.el--mb10
+          header.page-header
+            .page-header__content
+              .container
+                .page-header__content.page-header__content--body
+                  .page-header__content-arrow
+                    a.arrow(href="messages.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+                  h2.text.text--white24 Amanda Gould
+        main.page-content
+          nav.menu.menu--hidden
+            .el.el--mb35
+              .menu__head
+                span.menu__exit
+                .menu__head-title
+                  h2.text.text--white20 Indy Sports
+                    span.menu__head-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-head-icon', className: 'menu-head-icon'})
+            ul.menu__list
+              li.menu__items
+                a.text.text--blueLight18(href="wallet.html") Wallet
+              li.menu__items
+                a.text.text--blueLight18(href="referal.html") Referal
+              li.menu__items
+                a.text.text--blueLight18(href="corporate.html") Corporate
+              li.menu__items
+                a.text.text--blueLight18(href="settings.html") Settings
+              li.menu__items
+                a.text.text--blueLight18(href="faq.html") FAQ
+              li.menu__items.menu__items--logout
+                a.button.button--red.text.text--red16.text--uppercase.text--center(href="#") Log out
+                
+          .message.message--chat
+            ul.message__list
+              - for (let i = 0; i < 2; i++)
+                li.message__items.message__items--message
+                  .container
+                    .row.row--jc-sb.row--ai-c.el.el--mb10
+                      h2.text.text--blueLight18 Amanda Gould
+                      span.text.text--grey14 16:00
+                    .message__item
+                      p.text.text--greyDark14 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                li.message__items.message__items--message
+                  .container
+                    .row.row--jc-sb.row--ai-c.row--reverse.el.el--mb10
+                      h2.text.text--blueLight18 Aleksandr Aleks
+                      span.text.text--grey14 16:00
+                    .message__item
+                      p.text.text--greyDark14 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            
+            .message__add-message.el.el--p15-0
+              .container
+                .row.row--ai-c
+                  .message__add-message-textarea-wrap
+                    textarea.message__add-message-textarea.text.text--greyDark14
+                  button.message__add-message-button(type="button")
+                    span.message__add-message-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'mail', className: 'mail'})
+    
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

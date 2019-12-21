@@ -1,0 +1,111 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+    
+    .wrapper
+      .content.content--newBooking
+        .el.el--mb20
+          header.page-header
+            .page-header__content
+              .container
+                .page-header__content.page-header__content--body
+                  .page-header__content-arrow
+                    a.arrow(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+                  h2.text.text--white24.text--center 00:15 
+                    span.page-header__content-span.text.text--center Time remaning
+        main.page-content.el.el--mb30
+          nav.menu.menu--hidden
+            .el.el--mb35
+              .menu__head
+                span.menu__exit
+                .menu__head-title
+                  h2.text.text--white20 Indy Sports
+                    span.menu__head-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-head-icon', className: 'menu-head-icon'})
+            ul.menu__list
+              li.menu__items
+                a.text.text--blueLight18(href="wallet.html") Wallet
+              li.menu__items
+                a.text.text--blueLight18(href="referal.html") Referal
+              li.menu__items
+                a.text.text--blueLight18(href="corporate.html") Corporate
+              li.menu__items
+                a.text.text--blueLight18(href="settings.html") Settings
+              li.menu__items
+                a.text.text--blueLight18(href="faq.html") FAQ
+              li.menu__items.menu__items--logout
+                a.button.button--red.text.text--red16.text--uppercase.text--center(href="#") Log out
+                
+          .booking.booking--bookingOrder
+          
+            .booking__list-avatar-wrap
+              .container
+                .row.row--jc-c.el.el--mb15
+                  .booking__list-avatar
+                    img(src="%=static=%img/content/person.jpg")
+                p.text.text--blueLight24.text--center.el.el--mb10 George M
+                .row.row--jc-c.row--ai-c
+                  span.booking__list-avatar-star.el.el--mr10
+                    != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'star'})
+                  span.text.text--blueDark14 4.7
+            
+            .booking__list-specification.el.el--mb25
+              .container
+                .booking__list-specification-items
+                  .row.row--jc-sb
+                    p.text.text--blueLight18 Service
+                    p.text.text--blueLight18 Date and time
+                  .row.row--jc-sb
+                    p.text.text--blueDark16 90 Minutes
+                    p.text.text--blueDark16 20:00-21:00
+                  .row.row--jc-sb
+                    p.text.text--grey14 Deep Tissue
+                    p.text.text--grey14 09 / 11 / 2001
+                .booking__list-specification-items
+                  .row.row--jc-sb.row--ai-c
+                    .booking__list-specification-item
+                      p.text.text--blueLight18 Address
+                        span.text.text--greyDark14 Inner Park Road 44 London
+                    p.text.text--greyDark18.text--uppercase SW19 6DD
+                .booking__list-specification-items
+                  .row.row--jc-sb.el.el--mb5
+                    p.text.text--blueLight18 Comments
+                    p.text.text--grey18 Booking ref: #1234
+                  .booking__list-message-text
+                    p.text.text--blueDark14 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                  
+            .booking__list-buttons
+              .container
+                .el.el--mb20
+                  button.button.button--blue.text.text--blueLight24(type="button") Extend
+                button.button.button--red.text.text--blueLight24(type="button") Report user
+        
+      footer.page-footer
+        .footer-content
+          .footer-content__description
+            .footer-content__description--body
+              .container
+                ul.nav
+                  li.nav__items
+                    a.nav__item.nav__item--newBooking(href="new-booking-start.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'new-booking', className: 'new-booking'})
+                  li.nav__items
+                    a.nav__item.nav__item--bookingList(href="booking-list.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'booking-list', className: 'booking-list'})
+                  li.nav__items
+                    a.nav__item.nav__item--message(href="messages.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'message-icon', className: 'message-icon'})
+                  li.nav__items
+                    a.nav__item.nav__item--menu(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-icon', className: 'menu-icon'})
+    
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

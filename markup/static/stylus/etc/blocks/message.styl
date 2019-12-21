@@ -1,0 +1,69 @@
+.message
+  &--chat
+    flex-grow 1
+    display flex
+    flex-direction column
+
+.message__list
+  reset-list()
+  
+.message__items
+  padding 20px 0
+  
+  border-bottom 1px solid #edeff2
+  &:last-child
+    border-bottom none
+  &--message
+    padding 15px 0 
+    .message__item
+      overflow auto
+      height auto
+      padding-left 2%
+  
+.message__item
+  overflow hidden
+  height 51px
+  padding-left 7.111111%
+  
+.message__add-message
+  margin-top auto
+  
+  background-color #afe8ed
+  
+.message__add-message-textarea-wrap
+  flex-grow 1
+  
+.message__add-message-textarea
+  reset-input()
+  
+  height 45px
+  padding 5px
+  
+  background-color white
+  
+  border-radius 5px
+  
+  resize none
+  
+.message__add-message-button
+  reset-button()
+  
+  margin-left 5%
+  
+.message__add-message-icon
+  display block
+  width 49px
+  height 34px
+  .mail
+    width 100%
+    height auto
+    
+    fill:none;stroke:white;stroke-width:2px;
+  
+@media (min-width: 481px)
+  .message__item
+    padding-left 50px
+    
+@media (max-width: 350px)
+  .message__item
+    padding-left 20px

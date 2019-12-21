@@ -1,0 +1,190 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+    
+    .wrapper
+      .content
+        .el.el--mb20
+          header.page-header
+            .page-header__content
+              .container
+                .page-header__content.page-header__content--body
+                  .page-header__content-arrow
+                    a.arrow(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+                  h2.text.text--white24 Referral
+                  .page-header__content-question
+                    span.question
+                      != pugHelpers.Icon.call(locals, {iconName: 'question-icon', className: 'question-icon'})
+        main.page-content.el.el--mb30
+          nav.menu.menu--hidden
+            .el.el--mb35
+              .menu__head
+                span.menu__exit
+                .menu__head-title
+                  h2.text.text--white20 Indy Sports
+                    span.menu__head-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-head-icon', className: 'menu-head-icon'})
+            ul.menu__list
+              li.menu__items
+                a.text.text--blueLight18(href="wallet.html") Wallet
+              li.menu__items
+                a.text.text--blueLight18(href="referal.html") Referal
+              li.menu__items
+                a.text.text--blueLight18(href="corporate.html") Corporate
+              li.menu__items
+                a.text.text--blueLight18(href="settings.html") Settings
+              li.menu__items
+                a.text.text--blueLight18(href="faq.html") FAQ
+              li.menu__items.menu__items--logout
+                a.button.button--red.text.text--red16.text--uppercase.text--center(href="#") Log out
+                
+          .referal
+            .container
+            
+              .el.el--mb50
+                .row.row--jc-c
+                  a.referal__tab.referal__tab--active(href="#") Refer a friend
+                  a.referal__tab(href="#") Past invites
+              .el.el--mb10
+                .row.row--jc-c.row--ai-c
+                  p.text.text--blueDark16.el.el--mr20 Your referal code
+                  p.referal__code HCFT-IJ
+              .el.el--mb55
+                p.text.text--blueDark16.text--center.text--iphoneX14 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              
+              .el.el--mb45
+                .row.row--jc-sa
+                  .referal__block
+                    span.referal__person-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'person', className: 'person'})
+                    .el.el--mb5
+                      p.text.text--blueLight18.text--center Amanda Dick
+                    p.text.text--grey12.text--iphoneXCenter Bookings completed
+                  .referal__block
+                    span.referal__person-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'person', className: 'person'})
+                    .el.el--mb5
+                      p.text.text--blueLight18.text--center Amanda Dick
+                    p.text.text--blueDark16 50
+                    p.text.text--grey12 Completed
+                  .referal__block
+                    span.referal__person-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'person', className: 'person'})
+                    .el.el--mb5
+                      p.text.text--blueLight18.text--center Amanda Dick
+                    p.text.text--blueDark16 $50
+                    
+              .el.el--mb20
+                h2.text.text--blueLight18.text--center Earn free massage
+              .el.el--mb30
+                p.text.text--blueDark12.text--center Give your friends $20 off their first massage and get rewarded!
+                
+              .el.el--mb45
+                .row.row--jc-sa
+                  .referal__block
+                    span.referal__person-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'person', className: 'person'})
+                    .referal__block-button
+                      .button.button--blue.button--pt3.button--uppercase 1ST
+                      span.referal__block-button-description Refer you 1st friend for 10% off your next massage
+                  .referal__block
+                    span.referal__person-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'person', className: 'person'})
+                    .referal__block-button
+                      .button.button--blue.button--pt3.button--uppercase 2ST
+                  .referal__block
+                    span.referal__person-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'person', className: 'person'})
+                    .referal__block-button
+                      .button.button--blue.button--pt3.button--uppercase 3ST
+                  .referal__block
+                    span.referal__person-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'person', className: 'person'})
+                    .referal__block-button
+                      .button.button--blue.button--pt3.button--uppercase 4ST
+                      
+            .el.el--mb70
+              ul.referal__list
+                li.referal__items
+                  .container
+                    .row.row--jc-sa
+                      p.text.text--blueDark18.text--fw400 Adam
+                      p.text.text--blueDark18.text--fw400 $ 50.0
+                li.referal__items
+                  .container
+                    .row.row--jc-sa
+                      p.text.text--blueDark18.text--fw400 Adam
+                      p.text.text--blueDark18.text--fw400 $ 50.0
+                li.referal__items
+                  .container
+                    .row.row--jc-sa
+                      p.text.text--blueDark18.text--fw400 Adam
+                      p.text.text--blueDark18.text--fw400 $ 50.0
+                li.referal__item-total
+                  .container
+                    .row.row--jc-sa
+                      p.text.text--blueDark16 For all time
+                      p.text.text--green16.text--fw400 $ 600.00
+                      
+            .container
+              .el.el--mb25
+                p.text.text--blueDark18.text--fw400.text--center Redeem a voucher or referral code
+              .el.el--mb40
+                p.text.text--blueDark14.text--center Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              
+              .el.el--mb40
+                .referal__enter-code
+                  .referal__enter-code-inputWrap
+                    input.referal__enter-code-input.text.text--grey16.text--uppercase(type="text" name="enterCode" placeholder="Enter code")
+                    button.referal__enter-code-button.text.text--blueLight20.text--uppercase.text--center(type="button") Reedem
+                    
+              .el.el--mb20
+                p.text.text--blueDark14 Lorem ipsum dolor sit amet, consectetur adipisicing elit
+              .el.el--mb40
+                p.text.text--blueDark14 Lorem ipsum dolor sit amet
+                
+              .el.el--mb20
+                .row.row--jc-c
+                  .referal__button-save
+                    button.button.button--blue.text.text--blueLigth20.text--uppercase.text--center(type="button") Save
+                    
+              .referal__share
+                .el.el--mb15
+                  p.text.text--blueDark14.text--fw400 Share
+                .row
+                  a.referal__share-icon.referal__share-icon--fb(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'fb', className: 'fb'})
+                  a.referal__share-icon.referal__share-icon--tw(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'tw', className: 'tw'})
+                  a.referal__share-icon.referal__share-icon--inst(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'inst', className: 'inst'})
+            
+      footer.page-footer
+        .footer-content
+          .footer-content__description
+            .footer-content__description--body
+              .container
+                ul.nav
+                  li.nav__items
+                    a.nav__item.nav__item--newBooking(href="new-booking-start.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'new-booking', className: 'new-booking'})
+                  li.nav__items
+                    a.nav__item.nav__item--bookingList(href="booking-list.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'booking-list', className: 'booking-list'})
+                  li.nav__items
+                    a.nav__item.nav__item--message(href="messages.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'message-icon', className: 'message-icon'})
+                  li.nav__items
+                    a.nav__item.nav__item--menu(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-icon', className: 'menu-icon'})
+    
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

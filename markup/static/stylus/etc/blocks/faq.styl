@@ -1,0 +1,44 @@
+.faq__icon-wrap
+  display block
+  width 10.416666666666667%
+  .faq-icon
+    width 100%
+    height auto
+    
+    fill blueLight
+    
+.faq__questions
+  reset-list()
+  
+.faq__question
+  padding 15px 0
+  
+  border-top 1px solid #e4f6f8
+  &:last-child
+    border-bottom 1px solid #e4f6f8
+  &--open
+    .faq__question-arrow
+      transform rotate(270deg)
+    .faq__question-description
+      display block
+  
+.faq__question-arrow
+  display block
+  width 10px
+  height 19px
+  
+  transform rotate(180deg)
+  .arrow-icon
+    width 100%
+    height auto
+    
+    fill:none;stroke:blueLight;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;
+    
+.faq__question-description
+  display none
+  margin-top 15px
+  padding-left 5%
+    
+@media (max-width: 470px)
+  .faq__icon-wrap
+    width 50px

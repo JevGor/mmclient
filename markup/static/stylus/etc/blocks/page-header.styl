@@ -1,0 +1,41 @@
+.page-header
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  height 65px
+  
+  background-color blueLight
+  
+.page-header__content
+  position relative
+  
+  box-sizing border-box
+  display flex
+  justify-content center
+  width 100%
+  &--body
+    display flex
+    justify-content center
+    align-items center
+    width auto
+  .container
+    flex-grow 1
+    
+.page-header__content-arrow,
+.page-header__content-question
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  
+  height 35px
+  margin: auto;
+  
+.page-header__content-arrow
+  left: 3.125%;
+  
+.page-header__content-question
+  right: 3.125%;
+  
+.page-header__content-span
+  display block

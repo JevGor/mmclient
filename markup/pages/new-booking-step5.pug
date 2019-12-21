@@ -1,0 +1,133 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+    
+    .wrapper
+      .content
+        .el.el--mb20
+          header.page-header
+            .page-header__content
+              .container
+                .page-header__content.page-header__content--body
+                  .page-header__content-arrow
+                    a.arrow(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+                  h2.text.text--white24 Sat 15 July 2017
+        main.page-content.el.el--mb50
+          nav.menu.menu--hidden
+            .el.el--mb35
+              .menu__head
+                span.menu__exit
+                .menu__head-title
+                  h2.text.text--white20 Indy Sports
+                    span.menu__head-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-head-icon', className: 'menu-head-icon'})
+            ul.menu__list
+              li.menu__items
+                a.text.text--blueLight18(href="wallet.html") Wallet
+              li.menu__items
+                a.text.text--blueLight18(href="referal.html") Referal
+              li.menu__items
+                a.text.text--blueLight18(href="corporate.html") Corporate
+              li.menu__items
+                a.text.text--blueLight18(href="settings.html") Settings
+              li.menu__items
+                a.text.text--blueLight18(href="faq.html") FAQ
+              li.menu__items.menu__items--logout
+                a.button.button--red.text.text--red16.text--uppercase.text--center(href="#") Log out
+                
+          .booking
+            .container
+            
+              .booking__order-nav.el.el--mb30
+                .row.row--jc-c
+                  a.booking__order-nav-items.booking__order-nav-items--finish(href="new-booking-step1.html") 1
+                  a.booking__order-nav-items.booking__order-nav-items--finish(href="new-booking-step2.html") 2
+                  a.booking__order-nav-items.booking__order-nav-items--finish(href="new-booking-step3.html") 3
+                  a.booking__order-nav-items.booking__order-nav-items--finish(href="new-booking-step4.html") 4
+                  a.booking__order-nav-items.booking__order-nav-items--active(href="new-booking-step5.html") 5 Confirm
+                  
+            ul.booking__confirm-list.el--mb20
+              li.booking__confirm-items
+                .container
+                  .row.row--jc-sb
+                    p.booking__confirm-item.booking__confirm-item--title.text.text--blueThin12.text--iphone5-blueThin10 On
+                    p.booking__confirm-item.text.text--blueThin12.text--iphone5-blueThin10 23/09/2017
+                    p.booking__confirm-item.text.text--blueThin12.text--iphone5-blueThin10 23/09/2017 - 24/09/2017
+                    p.booking__confirm-item.text.text--blueThin12.text--iphone5-blueThin10 13:30-19:00
+              li.booking__confirm-items
+                .container
+                  .row
+                    p.booking__confirm-item.booking__confirm-item--title.el--resizeMr11.el--resizeMr8Pixel.text.text--blueThin12.text--iphone5-blueThin10 Staff :
+                    p.booking__confirm-item.booking__confirm-item--name.el--resizeMr15.el--resizeMr11Pixel.text.text--blueThin12.text--iphone5-blueThin10 Jack Lee
+                    p.booking__confirm-item.el--resizeMr10.text.text--blueThin12.text--iphone5-blueThin10 Role:
+                    p.booking__confirm-item.text.text--blueThin12.text--iphone5-blueThin10 Cheff  
+              li.booking__confirm-items
+                .container
+                  .row.row--jc-sb
+                    p.booking__confirm-item.booking__confirm-item--title.text.text--blueThin12.text--iphone5-blueThin10 Postcode:
+                    p.booking__confirm-item.booking__confirm-item--name.text.text--blueThin12.text--iphone5-blueThin10 WC1 H32HN
+                    p.booking__confirm-item.text.text--blueThin12.text--iphone5-blueThin10 Address:
+                    p.booking__confirm-item.booking__confirm-item--name.text.text--blueThin12.text--iphone5-blueThin10 1309 Westminster Bridge
+                    
+            .booking__confirm-details.el--mb40
+              .container
+                h2.text.text--blueThin16.text--center.el--mb20 Is there anything else?
+                .booking__confirm-details-textarea-wrap.el--mb30
+                  textarea.booking__confirm-details-textarea.text.text--blueThin14(placeholder="Details")
+                .row
+                  button.button.button--blue.button--p15.text.text--blueLigth18.text--center.text--uppercase(type="button") Confirm
+                  
+            .booking__confirm-pay.el--mb25
+              .container
+                h2.text.text--blueThin16.text--center.el--mb30 Pay now
+                .booking__confirm-pay-buttons.row.row--jc-sb.el--mb30
+                  input.booking__confirm-pay-radio(type="radio" name="radio" checked)#bankCard
+                  input.booking__confirm-pay-radio(type="radio" name="radio")#payPal
+                  input.booking__confirm-pay-radio(type="radio" name="radio")#cvv
+                  
+                  label(for="bankCard").booking__confirm-pay-button.booking__confirm-pay-button--active Bank card 1
+                  label(for="payPal").booking__confirm-pay-button PayPal
+                  label(for="cvv").booking__confirm-pay-button CVV2
+                button.button.button--blue.text.text--blueLigth14.text--center.text--uppercase(type="button") Pay
+                
+            .booking__confirm-sum
+              .container
+                .row.row--jc-sb
+                  h2.text.text--grey24 Summary
+                  p.text.text--grey24 £230
+                  
+            .booking__confirm-notice.el--mt25
+              .container
+                .row.row--jc-c
+                  p.text.text--blueLight14.text--center Your booking was awaiting confirmation, once confirmed your account will be billed
+                
+        
+      footer.page-footer
+        .footer-content
+          .footer-content__description
+            .footer-content__description--body
+              .container
+                ul.nav
+                  li.nav__items
+                    a.nav__item.nav__item--newBooking(href="new-booking-start.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'new-booking', className: 'new-booking'})
+                  li.nav__items
+                    a.nav__item.nav__item--bookingList(href="booking-list.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'booking-list', className: 'booking-list'})
+                  li.nav__items
+                    a.nav__item.nav__item--message(href="messages.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'message-icon', className: 'message-icon'})
+                  li.nav__items
+                    a.nav__item.nav__item--menu(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-icon', className: 'menu-icon'})
+    
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

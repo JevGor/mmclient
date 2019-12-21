@@ -1,0 +1,202 @@
+.wallet
+  margin-bottom 35px
+
+.wallet__cards
+  border-bottom 1px solid #d9e2e5
+
+.wallet__cart
+  position relative
+  
+  width 37.083333%
+  min-height 85px
+  margin-bottom 55px
+  
+  background-image url('%=static=%content/payPal.png')
+  background-repeat no-repeat
+  background-position center center
+  
+  border 1px solid grey
+  border-radius 5px
+  &--add
+    display flex
+    justify-content center
+    align-items center
+    
+    background-image none
+  &--removeHidden
+    display block
+  &--paymentMethod
+    min-height 45px
+    margin-bottom 0
+    
+.wallet__addIcon
+  position relative
+  
+  display block
+  width 21px
+  height 21px
+  
+  exit(21px, 1px, grey, 90, 180)
+  
+.wallet__addCart-textWrap
+  position absolute
+  left 0
+  right 0
+  bottom -25px
+  
+  margin auto
+  
+.wallet__cart-overlay
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+  
+  display flex
+  justify-content center
+  align-items center
+  margin auto
+  
+  background-color rgba(000, 000, 000, 0.5)
+  &--hidden
+    display none
+  
+.wallet__cart-exit
+  position relative
+  
+  box-sizing border-box
+  display block
+  width 30px
+  height 30px
+  
+  background-color white
+  
+  border 1px solid #f27171
+  border-radius 50%
+  
+  exit(15.627417px, 1px, #f27171)
+  &--exit
+    position absolute
+    top -15px
+    right -15px
+    z-index 5
+  &--hidden
+    display none
+    
+.wallet__cart-row
+  position absolute
+  left 0
+  right 0
+  bottom -35px
+  
+  display flex
+  justify-content space-between
+  margin auto
+  &--hidden
+    display none
+  
+.wallet__cart-confirm
+  display block
+  width 30px
+  height 30px
+  .confirm
+    width 100%
+    height auto
+    
+    fill:white;stroke:#2ebe51;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;
+    
+.wallet__paymentButton
+  display block
+  width 37.083333%
+  
+  background-image url('%=static=%content/payPal.png')
+  background-repeat no-repeat
+  background-position center center
+  
+  border 1px solid grey
+  border-radius 5px
+  
+.wallet__paymentMethod
+  &--hidden
+    display none
+
+.wallet__form
+  &--hidden
+    display none
+  
+.wallet__form-list
+  reset-list()
+  
+.wallet__form-items
+  display flex
+  align-items center
+  margin-bottom 40px
+  &:last-child
+    margin-bottom 0
+  &--button
+    justify-content center
+  
+.wallet__form-text
+  display block
+  min-width 140px
+  margin-right 3.125%
+  
+  font-size 12px
+  line-height 15px
+  font-weight 100
+  color blueDark
+  text-align right
+  
+.wallet__form-inputWrap
+  flex-grow 1
+  &--number
+    margin-right 1.041666666666667%
+    &:last-child
+      margin-right 0
+    .wallet__form-input
+      text-align center
+  &--error
+    position relative
+    .wallet__form-input
+      border-color #c83c3c
+    .wallet__form-input-error
+      display block
+  
+.wallet__form-input
+  reset-input()
+  
+  padding 11px 5px
+  
+  font-size 12px
+  line-height 15px
+  font-weight 100
+  color blueDark
+  
+  border 1px solid grey
+  border-radius 5px
+  
+.wallet__form-buttonWrap
+  width 31.25%
+  
+.wallet__form-input-error
+  position absolute
+  left 0
+  right 0
+  bottom -24px
+  
+  display none
+  margin auto
+  
+  font-size 12px
+  line-height 15px
+  font-weight 100
+  color #bd3434
+  white-space nowrap
+  text-align center
+  &--cvv
+    left -20px
+    
+@media (max-width: 370px)
+  .wallet__form-input-error
+    font-size 9px

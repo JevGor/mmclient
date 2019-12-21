@@ -1,0 +1,139 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content
+        .el.el--mb20
+          header.page-header
+            .page-header__content
+              .container
+                .page-header__content.page-header__content--body
+                  .page-header__content-arrow
+                    a.arrow(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+                  h2.text.text--white24 Wallet
+                  .page-header__content-question
+                    span.question
+                      != pugHelpers.Icon.call(locals, {iconName: 'question-icon', className: 'question-icon'})
+        main.page-content
+          nav.menu.menu--hidden
+            .el.el--mb35
+              .menu__head
+                span.menu__exit
+                .menu__head-title
+                  h2.text.text--white20 Indy Sports
+                    span.menu__head-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-head-icon', className: 'menu-head-icon'})
+            ul.menu__list
+              li.menu__items
+                a.text.text--blueLight18(href="wallet.html") Wallet
+              li.menu__items
+                a.text.text--blueLight18(href="referal.html") Referal
+              li.menu__items
+                a.text.text--blueLight18(href="corporate.html") Corporate
+              li.menu__items
+                a.text.text--blueLight18(href="settings.html") Settings
+              li.menu__items
+                a.text.text--blueLight18(href="faq.html") FAQ
+              li.menu__items.menu__items--logout
+                a.button.button--red.text.text--red16.text--uppercase.text--center(href="#") Log out
+                
+          .wallet
+            .container
+              .el.el--mb15
+                p.text.text--blueDark16 Account balance $ 30.0
+              .el.el--mb30
+                p.text.text--blueDark16 Free treatments 1 treatment
+            .el.el--mb25
+              .wallet__cards
+                .container
+                  .row.row--jc-sa.row--wrap
+                    .wallet__cart.wallet__cart--add
+                      span.wallet__addIcon
+                      .wallet__addCart-textWrap
+                        p.text.text--grey12.text--noWrap.text--center New payment  method
+                    .wallet__cart.wallet__cart-added
+                      span.wallet__cart-exit.wallet__cart-exit--exit.wallet__cart-exit--hidden
+                      .wallet__cart-overlay.wallet__cart-overlay--hidden
+                        p.text.text--white14.text--fw400 Want to remove?
+                      .wallet__cart-row.wallet__cart-row--hidden
+                        span.wallet__cart-confirm
+                          != pugHelpers.Icon.call(locals, {iconName: 'confirm', className: 'confirm'})
+                        span.wallet__cart-exit.wallet__cart-exit--cancel
+                      
+            .wallet__paymentMethod.wallet__paymentMethod--hidden
+              .container
+                .el.el--mb20
+                  p.text.text--blueLight14.text--center New Payment Method
+                .el.el--mb20
+                  .row.row--jc-sa.row--wrap
+                    .wallet__cart.wallet__cart--add.wallet__cart--paymentMethod
+                        span.wallet__addIcon
+                    a.wallet__paymentButton(href="#")
+                  
+                .wallet__form.wallet__form--hidden
+                  form(action="action.php")
+                    ul.wallet__form-list
+                    
+                      li.wallet__form-items
+                        label.wallet__form-text(for="card") Credit/Debit Card Number
+                        .wallet__form-inputWrap.wallet__form-inputWrap--error
+                          input.wallet__form-input(type="text" name="text" required)#card
+                          span.wallet__form-input-error Credit/Debit Card Number is required
+                          
+                      li.wallet__form-items
+                        label.wallet__form-text(for="date") Expiration date (MM/YYYY)
+                        .wallet__form-inputWrap
+                          input.wallet__form-input(type="text" name="text" required)#date
+                          span.wallet__form-input-error Expration date (MM/YYYY) is required
+                          
+                      li.wallet__form-items
+                        label.wallet__form-text(for="ccv") CVV/CV2
+                        .row.row--grow
+                          .wallet__form-inputWrap.wallet__form-inputWrap--number
+                            input.wallet__form-input(type="number" name="text" required)#ccv
+                          .wallet__form-inputWrap.wallet__form-inputWrap--number
+                            input.wallet__form-input(type="number" name="text" required)
+                            span.wallet__form-input-error.wallet__form-input-error--cvv CVV/CV2 is requred
+                          .wallet__form-inputWrap.wallet__form-inputWrap--number
+                            input.wallet__form-input(type="number" name="text" required)
+                            
+                      li.wallet__form-items
+                        label.wallet__form-text(for="postcode") Billing Postcode
+                        .wallet__form-inputWrap
+                          input.wallet__form-input(type="text" name="text" required)#postcode
+                          span.wallet__form-input-error Billing postcode is required
+                          
+                      li.wallet__form-items.wallet__form-items--button
+                        .wallet__form-buttonWrap
+                          button.button.button--blue.button--uppercase(type="submit") Add
+
+      footer.page-footer
+        .footer-content
+          .footer-content__description
+            .footer-content__description--body
+              .container
+                ul.nav
+                  li.nav__items
+                    a.nav__item.nav__item--newBooking(href="new-booking-start.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'new-booking', className: 'new-booking'})
+                  li.nav__items
+                    a.nav__item.nav__item--bookingList(href="booking-list.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'booking-list', className: 'booking-list'})
+                  li.nav__items
+                    a.nav__item.nav__item--message(href="messages.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'message-icon', className: 'message-icon'})
+                  li.nav__items
+                    a.nav__item.nav__item--menu(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-icon', className: 'menu-icon'})
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

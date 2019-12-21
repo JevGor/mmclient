@@ -1,0 +1,160 @@
+.settings__user-config-row
+  &--open
+    .settings__user-arrow
+      transform rotate(270deg)
+
+.settings__user-avatar
+  width 45px
+  height 45px
+  margin-right 15px
+  
+  border 1px solid blueLight
+  border-radius 50%
+  
+.settings__user-arrow
+  position absolute
+  top 0
+  right: 3.125%;
+  
+  width 10px
+  height 19px
+  margin-top 10px
+  margin-left auto
+  margin-bottom auto
+  
+  transform rotate(180deg)
+  .arrow-icon
+    width 100%
+    height auto
+    
+    fill:none;stroke:blueLight;stroke-linecap:round;stroke-linejoin:round;stroke-width:5px;
+    
+.settings__user-config-icon
+  width 17px
+  height 15px
+  margin-right 10px
+  .settings-icon
+    width 100%
+    height auto
+    
+    fill:none;stroke:#969696;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;
+    
+.settings__user-config
+  &--hidden
+    display none
+    
+.settings__user-config-inputWrap
+  flex-grow 1
+  &--fixed
+    flex-grow 0
+    width 40%
+    
+.settings__user-config-input
+  reset-input()
+  
+  padding 5px
+  
+  font-size 14px
+  line-height 17px
+  font-weight 400
+  color blueDark
+  
+  border 1px solid grey
+  border-radius 5px
+  
+  opacity 0.5
+  
+.settings__user-config-exit-edit
+  position relative
+  
+  display block
+  width 26px
+  height 26px
+  margin-left 10px
+  
+  opacity 0.7
+  
+  exit(26px, 1px, red, 45, -45)
+  &--hidden
+    display none
+  
+.settings__address-cart
+  padding 15px 0
+  
+  border-bottom 1px solid #d9e2e5
+  &--active
+    .settings__user-arrow
+      transform rotate(270deg)
+    .settings__address-cart-description-text
+      display block
+  .container
+    position relative
+  
+.settings__user-config-button
+  width 30%
+  
+.settings__address-home-icon
+  display block
+  width 28px
+  height 27px
+  margin-top: 4px;
+  margin-right 15px
+  margin-bottom: auto;
+  .home,
+  .work
+    width 100%
+    height auto
+    
+    fill:none;stroke:blueLight;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;
+    
+.settings__address-add-textarea-content
+  &--hidden
+    display none
+    
+.settings__address-cart-description-text
+  position relative
+  
+  display none
+  margin-top 20px
+  
+.settings__address-cart-description-text-cancel
+  position absolute
+  top 0
+  right 0
+  
+  width 20px
+  height 20px
+  exit(20px, 1px, grey, 45, -45)
+    
+.settings__address-add-icon
+  position relative
+  
+  display block
+  width 20px
+  height 20px
+  margin-right 20px
+  
+  exit(20px, 2px, blueLight, 90, 180)
+  
+.settings__address-add-textareaWrap
+  height 100px
+  
+.settings__address-add-textarea
+  reset-input()
+  
+  height 100%
+  padding 5px
+  
+  font-size 14px
+  line-height 17px
+  font-weight 400
+  color blueDark
+  
+  border 1px solid #a5e2e7
+  border-radius 5px
+  
+  resize none
+  
+@media (max-width: 375px)
+  .settings__address-add-textareaWrap
+    height auto

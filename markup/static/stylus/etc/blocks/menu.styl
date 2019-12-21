@@ -1,0 +1,74 @@
+.menu
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 125px;
+  z-index 10
+  
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  
+  background-color: #ffffff;
+  &--hidden
+    display none
+
+.menu__head
+  position relative
+  
+  display flex
+  justify-content center
+  align-items center
+  height 105px
+  
+  background-color #9fdce1
+  
+.menu__exit
+  position absolute
+  top 0
+  right 3.125%
+  bottom 0
+  
+  display block
+  width 50px
+  height 50px
+  margin auto
+  
+  opacity 0.6
+  
+  exit(50px, 1px, red)
+  
+.menu__head-title
+  position relative
+  
+.menu__list
+  reset-list()
+  
+  flex-grow: 1;
+  display flex
+  flex-direction column
+  justify-content: space-between;
+  align-items center
+  padding-bottom: 60px
+  
+  
+.menu__items
+  &--logout
+    width 44.791666666666667%
+  
+.menu__head-icon
+  position absolute
+  top 0
+  left -100px
+  bottom 0
+  
+  display block
+  width 75px
+  height 75px
+  margin auto
+  .menu-head-icon
+    width 100%
+    height auto
+    
+    fill:none;stroke:white;stroke-miterlimit:10;stroke-width:2px;

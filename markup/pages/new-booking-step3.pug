@@ -1,0 +1,108 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+    
+    .wrapper
+      .content.content--newBooking
+        .el.el--mb20
+          header.page-header
+            .page-header__content
+              .container
+                .page-header__content.page-header__content--body
+                  .page-header__content-arrow
+                    a.arrow(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'arrow-icon', className: 'arrow-icon'})
+                  h2.text.text--white24 Sat 15 July 2017
+        main.page-content.el.el--mb50
+          nav.menu.menu--hidden
+            .el.el--mb35
+              .menu__head
+                span.menu__exit
+                .menu__head-title
+                  h2.text.text--white20 Indy Sports
+                    span.menu__head-icon
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-head-icon', className: 'menu-head-icon'})
+            ul.menu__list
+              li.menu__items
+                a.text.text--blueLight18(href="wallet.html") Wallet
+              li.menu__items
+                a.text.text--blueLight18(href="referal.html") Referal
+              li.menu__items
+                a.text.text--blueLight18(href="corporate.html") Corporate
+              li.menu__items
+                a.text.text--blueLight18(href="settings.html") Settings
+              li.menu__items
+                a.text.text--blueLight18(href="faq.html") FAQ
+              li.menu__items.menu__items--logout
+                a.button.button--red.text.text--red16.text--uppercase.text--center(href="#") Log out
+                
+          .booking.booking--newBooking
+            .container
+            
+              .booking__order-nav.el.el--mb30
+                .row.row--jc-c
+                  a.booking__order-nav-items.booking__order-nav-items--finish(href="new-booking-step1.html") 1
+                  a.booking__order-nav-items.booking__order-nav-items--finish(href="new-booking-step2.html") 2
+                  a.booking__order-nav-items.booking__order-nav-items--active(href="new-booking-step3.html") 3 Address
+                  a.booking__order-nav-items(href="new-booking-step4.html") 4
+                  a.booking__order-nav-items(href="new-booking-step5.html") 5
+                  
+              .booking__order-address
+              
+                .booking__order-address-items
+                  .row.row--ai-c
+                    .booking__order-address-label-wrap.el--resizeMr5
+                      label.text.text--blueDark18.text--fw400.text--noWrap.text--right(for="postCode") Post code
+                    .booking__order-address-input-wrap
+                      input.booking__order-address-input.text.text--blueDark18.text--fw400(type="text")#postCode
+                      
+                .booking__order-address-items
+                  .row.row--ai-c
+                    .booking__order-address-label-wrap.el--resizeMr5
+                      label.text.text--blueDark18.text--fw400.text--noWrap.text--right(for="address") Address
+                    .booking__order-address-input-wrap
+                      input.booking__order-address-input.text.text--blueDark18.text--fw400(type="text")#address
+                      
+                .booking__order-address-items
+                  .row.row--ai-c
+                    .booking__order-address-label-wrap.el--resizeMr5
+                      label.text.text--blueDark18.text--fw400.text--noWrap.text--right Preselected
+                    .booking__order-address-select-wrap
+                      span.booking__order-address-select-indicator
+                      select.booking__order-address-select.text.text--blueDark18.text--fw400
+                        option(value="1") Address 1
+                        option(value="2") Address 2
+                        option(value="3") Address 3
+                      
+                      
+                .row
+                  a.button.button--blue.text.text--blueLight20.text--center.text--uppercase(href="#") Next
+        
+      footer.page-footer
+        .footer-content
+          .footer-content__description
+            .footer-content__description--body
+              .container
+                ul.nav
+                  li.nav__items
+                    a.nav__item.nav__item--newBooking(href="new-booking-start.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'new-booking', className: 'new-booking'})
+                  li.nav__items
+                    a.nav__item.nav__item--bookingList(href="booking-list.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'booking-list', className: 'booking-list'})
+                  li.nav__items
+                    a.nav__item.nav__item--message(href="messages.html")
+                      != pugHelpers.Icon.call(locals, {iconName: 'message-icon', className: 'message-icon'})
+                  li.nav__items
+                    a.nav__item.nav__item--menu(href="#")
+                      != pugHelpers.Icon.call(locals, {iconName: 'menu-icon', className: 'menu-icon'})
+    
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

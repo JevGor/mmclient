@@ -1,0 +1,890 @@
+.booking
+  &--newBooking
+    flex-grow 1
+    display flex
+    flex-direction column
+    .container
+      flex-grow 1
+      display flex
+      flex-direction column
+      justify-content space-between
+  &--bookingOrder
+    flex-grow 1
+    display flex
+    flex-direction column
+    justify-content space-between
+
+.booking__list
+  reset-list()
+  
+.booking__items
+  margin-bottom 10px
+  &:last-child
+    margin-bottom 0
+  
+.booking__list-description
+  display block
+  padding 15px 0
+  
+  text-decoration none
+  
+  background-color #edf9fa
+  
+.booking__new-booking-tab
+  reset-button()
+  
+  min-width 35.555555555555556%
+  padding 6px 5px
+  
+  font-size 18px
+  line-height 21px
+  font-weight 100
+  color white
+  text-align center
+  
+  background-color #37d1b9
+  
+  border-radius 30px
+    
+.booking__new-booking-nav-list
+  reset-list()
+  
+  flex-grow 1
+  display flex
+  flex-direction column
+  
+.booking__new-booking-nav-item
+  flex-grow 1
+  display flex
+  flex-direction column
+  
+.booking__linksWrap
+  position relative
+  
+  transform translateX(9px)
+  
+.booking__new-booking-nav-resizeWrap
+  position absolute
+  top 0
+  left -30px
+  bottom 0
+  
+  width 3px
+  margin auto
+  
+.booking__title
+  border-bottom 1px solid #e5ebed
+  
+.booking__new-booking-nav-resize-bar
+  position relative
+  
+  height 100%
+  
+  background-color #f1f8f9
+  
+.booking__new-booking-nav-resize-bar-fill
+  height 48%
+  
+  background-color #8df0ff
+  
+  box-shadow: 0px 0px 31px 0px rgba(141,240,255,1);
+  
+.booking__new-booking-nav-resize-control
+  position absolute
+  top 48%
+  left -5px
+  
+  display block
+  width 15px
+  height 15px
+  
+  background-color white
+  
+  border-radius 50%
+  
+  box-shadow: 0px 0px 8px 2px rgba(141,240,255,1);
+  
+.booking__new-booking-nav-link
+  font-size 16px
+  line-height 19px
+  font-weight 100
+  color #6d8e93
+  text-decoration none
+  &--active
+    color #61d6e8
+  
+.booking__new-booking-button
+  reset-button()
+  
+  min-width 62.222222222222222%
+  padding 15px 5px
+  
+  background-color #37d1b9
+  
+  border-radius 30px
+  
+  box-shadow: 0px 11px 38px -4px rgba(55,209,185,0.54);
+  
+.booking__list-avatar-wrap
+  padding-bottom 15px
+  
+  border-bottom 1px solid #d2f0f3
+  
+.booking__list-avatar
+  box-sizing border-box
+  display flex
+  justify-content center
+  align-items center
+  width 130px
+  height 130px
+  
+  border 2px solid #4fc6d0
+  border-radius 50%
+  img
+    width 90%
+    
+    border-radius 50%
+  
+.booking__list-avatar-star
+  width 22px
+  height 22px
+  .star
+    width 100%
+    height auto
+    
+    fill blueLight
+  &--noFill
+    .star
+      fill none
+      stroke blueLight
+      stroke-width 5px
+    
+.booking__list-specification
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column
+  padding-top 15px
+  .container
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+.booking__list-specification-items
+  margin-bottom 10px
+  &:last-child
+    margin-bottom 0
+  &--bgcBlue
+    background-color #edf9fa
+    
+.booking__list-specification-item
+  max-width 110px
+  
+.booking__contact-link
+  text-decoration none
+  
+.booking__list-avatar-mail
+  width 42px
+  height 36px
+  
+  transform translateY(6px)
+  .mail
+    width 100%
+    height auto
+    
+    fill:none;stroke:blueLight;stroke-width:2px;
+    
+.booking__list-avatar-tel
+  width 36px
+  height 36px
+  .tel
+    width 100%
+    height auto
+    
+    fill:none;stroke:blueLight;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;
+    
+.booking__list-textarea
+  reset-input()
+  
+  padding 5px
+  
+  border 1px solid blueLight
+  border-radius 5px
+  
+  resize none
+  
+.booking__order-nav-items
+  margin-right 10px
+  padding 0 12px
+  
+  font-size 30px
+  line-height 43px
+  font-weight 100
+  color blueLight
+  text-align center
+  text-decoration none
+  
+  border 1px solid #4cc5cf
+  border-radius 50%
+  &:last-child
+    margin-right 0
+  &--active
+    padding 0 15px
+    
+    border-radius 30px
+  &--finish
+    color white
+    
+    background-color #61d6e8
+    
+.booking__order-cart
+  margin-bottom 20px
+  
+  border 1px solid #e1e1e1
+  border-radius 5px
+  &:last-child
+    margin-bottom 0
+  &--blue
+    border-color #4cc5cf
+    .booking__order-cart-title
+      background-color #e4fdff
+      
+      border-radius 5px 5px 0 0
+  
+.booking__order-cart-description
+  box-sizing border-box
+  min-height 125px
+  padding-top 25px
+  padding-left 20px
+  padding-right 20px
+  padding-bottom 20px
+  
+  background-image url('%=static=%content/booking-bg1.jpg')
+  background-repeat no-repeat
+  background-size 100% 100%
+  
+  border-radius 0 0 5px 5px
+  
+.booking__order-cart-description-button
+  min-width 100px
+  margin-right 3%
+  &:last-child
+    margin-right 0
+  
+.booking__next-step-link
+  box-shadow: 0px 9px 20px 1px rgba(76,197,207,0.31);
+  
+.booking__order-date-description
+  box-sizing border-box
+  overflow hidden
+  display flex
+  flex-direction column
+  height 42vh
+  
+  border-top 1px solid #d8d8d8
+  border-bottom 1px solid #d8d8d8
+  
+.booking__order-date-description-block-text-wrap
+  justify-content space-between
+  
+  margin-right 22px
+  &:last-child
+    margin-right 0
+  
+.booking__order-date-description-text
+  reset()
+  
+  font-size 20px
+  line-height 23px
+  font-weight 400
+  color #525252
+  text-transform uppercase
+  &--op25
+    opacity 0.25
+  &--op50
+    opacity 0.50
+  
+.booking__order-date-description-block-text-input-wrap
+  width 70px
+  &--before
+    position relative
+    &::before
+      content ':'
+      
+      position absolute
+      top 0
+      right -18%
+      bottom 0
+      
+      margin auto
+      
+      line-height 37px
+  
+.booking__order-date-description-block-text-input
+  reset-input()
+  
+  padding 8px 0
+  
+  font-size 20px
+  line-height 23px
+  font-weight 400
+  color #525252
+  text-transform uppercase
+  text-align center
+  
+  border 1px solid #4cc5cf
+  border-radius 5px
+  
+.booking__order-date-link
+  flex-grow 1
+  margin-right 10%
+  &:last-child
+    margin-right 0
+    
+.booking__order-address
+  margin auto 0
+  &--hidden
+    display none
+    
+.booking__order-address-items
+  margin-bottom 30px
+    
+.booking__order-address-label-wrap
+  width 105px
+    
+.booking__order-address-input-wrap
+  flex-grow 1
+    
+.booking__order-address-input
+  reset-input()
+  
+  padding 10px 10px
+  
+  background-color #f9f9f9
+  
+.booking__order-address-select-wrap
+  position relative
+  
+  flex-grow 1
+  
+  background-color #f9f9f9
+  
+.booking__order-address-select-indicator
+  position absolute
+  top 0
+  right 10px
+  bottom 0
+  
+  display block
+  width 12px
+  height 7px
+  margin auto
+  &::before,
+  &::after
+    center-absolute()
+    
+    content ''
+    
+    z-index 1
+    
+    width 8.48528137423857px
+    height 2px
+    
+    background-color blueDark
+  &::before
+    left -6px
+    
+    transform rotate(45deg)
+  &::after
+    right -4px
+    
+    transform rotate(-45deg)
+  
+.booking__order-address-select
+  reset-input()
+  
+  position relative
+  z-index 5
+  
+  padding 11px 10px
+  
+  background-color transparent
+  
+  appearance none
+  
+.booking__order-therapist-filter-headlineWrap
+  &--open
+    .booking__order-therapist-filter-headline-indicator
+      transform rotate(180deg)
+  
+.booking__order-therapist-filter-headline
+  position relative
+  
+.booking__order-therapist-filter-headline-indicator
+  position absolute
+  top 0
+  right 36.666666666666667%
+  bottom 0
+  
+  display block
+  width 17px
+  height 8px
+  margin auto
+  &::before,
+  &::after
+    center-absolute()
+    
+    content ''
+    
+    width 11.31370849898476px
+    height 1px
+    
+    background-color blueLight
+  &::before
+    left -7px
+    
+    transform rotate(45deg)
+  &::after
+    right -7px
+    
+    transform rotate(-45deg)
+    
+.booking__order-therapist-filter-border
+  height 1px
+  
+  background-image linear-gradient(to left, transparent 3%, #78D3D8, transparent 92%)
+  &--fill
+    background-image none
+    background-color blueLight
+  
+.booking__order-therapist-filter-search-wrap
+  margin-bottom 30px
+  &:last-child
+    margin-bottom 0
+  
+.booking__order-therapist-filter-description
+  padding 25px 0
+  
+  background-color #f7f7f7
+  
+  border-bottom 1px solid blueLight
+  &--hidden
+    display none
+  
+.booking__order-therapist-filter-description-content
+  width 64.444444444444444%
+  
+.booking__order-therapist-filter-input-search-wrap
+  flex-basis 100px
+  
+.booking__order-therapist-filter-input-search
+  reset-input()
+  
+  padding 11px 10px
+  
+  font-size 16px
+  line-height 19px
+  font-weight 400
+  color grey
+  
+  background-color white
+  
+.booking__order-therapist-filter-input-search-idicator
+  width 40px
+  
+  background-color blueLight
+  
+.booking__order-therapist-filter-input-search-idicator-icon
+  width 20px
+  height 20px
+  .search
+    width 100%
+    height auto
+    
+    fill:none;stroke:white;stroke-miterlimit:10;stroke-width:5px;
+    
+.booking__order-therapist-filter-select-wrap
+  position relative
+  
+  background-color white
+  
+.booking__order-therapist-filter-select-indicator
+  position absolute
+  top 0
+  right 10px
+  bottom 0
+  
+  display block
+  width 12px
+  height 7px
+  margin auto
+  &::before,
+  &::after
+    center-absolute()
+    
+    content ''
+    
+    z-index 1
+    
+    width 8.48528137423857px
+    height 2px
+    
+    background-color blueLight
+  &::before
+    left -6px
+    
+    transform rotate(45deg)
+  &::after
+    right -4px
+    
+    transform rotate(-45deg)
+    
+.booking__order-therapist-filter-select
+  reset-input()
+  
+  position relative
+  z-index 5
+  
+  padding-top 11px
+  padding-left 15px
+  padding-bottom 11px
+  
+  appearance none
+  
+.booking__order-therapist-filter-raiting-star-fill,
+.booking__order-therapist-filter-raiting-star-noFill
+  width 31px
+  height 31px
+  .star
+    width 100%
+    height auto
+    
+.booking__order-therapist-filter-raiting-star-fill
+  .star
+    fill blueLight
+    
+.booking__order-therapist-filter-raiting-star-noFill
+  .star
+    fill none
+    stroke blueLight
+    stroke-width 3px
+    
+.booking__order-therapist-cart
+  box-sizing border-box
+  width 190px
+  margin-top 30px
+  padding 20px 4.444444444444444%
+  
+  border 1px solid grey
+  border-radius 5px
+  
+.booking__order-therapist-cart-user
+  display block
+  width 79px
+  height 76px
+  
+  border 2px solid #4fc6d0
+  border-radius 50%
+  img
+    border-radius 50%
+    
+    transform scale(0.8)
+  .person
+    width 100%
+    height auto
+    
+    fill none
+    stroke #b7b7b7
+    stroke-width 3px
+    
+.booking__order-therapist-cart-star
+  width 18px
+  height 18px
+  .star
+    width 100%
+    height auto
+    
+    fill blueLight
+    
+.booking__order-therapist-cart-button
+  width 100%
+  
+.booking__confirm-list
+  reset-list()
+  
+.booking__confirm-items
+  padding 30px 0
+  
+  background-color #f4f9f9
+  &:nth-child(2n)
+    background-color white
+    
+.booking__confirm-item
+  &--title
+    width 50px
+  &--name
+    max-width 140px
+    
+.booking__confirm-details-textarea-wrap
+  height 65px
+    
+.booking__confirm-details-textarea
+  reset-input()
+  
+  height 100%
+  padding 15px 10px
+  
+  background-color #f9f9f9
+  
+  border 1px solid #4cc5cf
+  border-radius 5px
+  
+  resize none
+  &::-webkit-input-placeholder {
+    color blueThin
+    font-size: 14px;
+    line-height: 17px;
+    font-weight 100
+
+    opacity: 1;
+  }
+
+  &:-moz-input-placeholder {
+    color blueThin
+    font-size: 14px;
+    line-height: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight 100
+
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color blueThin
+    font-size: 14px;
+    line-height: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight 100
+
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color blueThin
+    font-size: 14px;
+    line-height: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-weight 100
+
+    opacity: 1;
+  }
+  
+.booking__confirm-pay-button
+  box-sizing border-box
+  min-width 28.888888888888889%
+  padding 10px 5px
+  
+  font-size 18px
+  line-height 21px
+  font-weight 100
+  color blueThin
+  text-decoration none
+  text-align center
+  
+  background-color #f9f9f9
+  
+  border 1px solid transparent
+  border-radius 5px
+  &--active
+    background-color transparent
+    
+    border-color blueLight
+    
+.booking__confirm-pay-radio
+  position absolute
+  
+  visibility hidden
+  width 0
+  height 0
+  
+.booking__confirm-sum
+  padding 15px 0
+  
+  background-color #f4f9f9
+  
+.booking__explore-headline
+  height 22vh
+  
+  background-color grey
+  
+.booking__explore-select-wrap
+  position relative
+  
+.booking__explore-select-main
+  position relative
+  
+  border 1px solid blueLight
+  border-radius 5px
+  
+.booking__explore-select-main-input
+  reset-input()
+  
+  position relative
+  z-index 5
+  
+  padding 10px 15px
+  
+.booking__explore-select-main-indicator
+  position absolute
+  top 0
+  right 15px
+  bottom 0
+  z-index 1
+  
+  display block
+  width 21px
+  height 11px
+  margin auto
+  &::before,
+  &::after
+    center-absolute()
+    
+    content ''
+    
+    width 15.556349186104046px
+    height 2px
+    
+    background-color blueLight
+  &::before
+    left -11px
+    
+    transform rotate(45deg)
+  &::after
+    right -9px
+    
+    transform rotate(-45deg)
+  &--open
+    transform rotate(180deg)
+    
+.booking__explore-select-description
+  position absolute
+  top 44px
+  left 0
+  right 0
+  
+  margin auto
+  
+  background-color white
+  
+  border 1px solid blueLight
+  border-radius 5px
+  &--hidden
+    display none
+  
+.booking__explore-select-description-input
+  reset()
+  
+  padding 15px
+  
+  font-size 20px
+  line-height 23px
+  font-weight 100
+  color blueDark
+  &:hover
+    color white
+    
+    background-color blueLight
+    
+@media (max-width: 450px)
+  .booking__order-nav-items
+    font-size 20px
+    line-height 36px
+    &--active
+      font-size 20px
+      
+  .booking__order-cart-description
+    padding-top 20px
+    
+  .booking__order-date-description-block-text-wrap
+    margin-right 15px
+    
+  .booking__order-date-description-block-text-input-wrap
+    &--before
+      &::before
+        right -13%
+        
+@media (max-width: 410px)
+  .booking__order-therapist-filter-headline-indicator
+    right 32.666667%
+    
+  .booking__order-therapist-filter-raiting-star-fill,
+  .booking__order-therapist-filter-raiting-star-noFill
+    width 25px
+    height 25px
+    
+  .booking__order-therapist-cart
+    width 150px
+
+@media (max-width: 375px)
+  .booking__order-date-description-block-text-wrap
+    margin-right 10px
+    
+  .booking__order-date-description-block-text-input-wrap
+    &--before
+      &::before
+        right -10%
+  
+@media (max-width: 374px)
+  .booking__new-booking-button
+    padding 7px 5px
+    
+  .booking__order-nav-items
+    font-size 15px
+    line-height 34px
+    &--active
+      padding 0 10px
+      
+      font-size 20px
+      
+  .booking__order-cart-description-button
+    min-width 80px
+    
+@media (max-width: 360px)
+  .booking__order-date-description
+    height 36vh
+    
+@media (max-width: 340px)
+  .booking__order-nav-items
+    &--active
+      font-size 17px
+      
+  .booking__order-date-description-text
+    font-size 15px
+    
+  .booking__order-date-description-block-text-input-wrap
+    width: 51px;
+    
+  .booking__order-date-description-block-text-input
+    padding 4px 0
+    
+    font-size 15px
+    
+  .booking__order-date-description-block-text-input-wrap
+    &--before
+      &::before
+        right -14%
+        
+        line-height 31px
+        
+  .booking__order-therapist-filter-headline-indicator
+    right 29.666667%
+    
+  .booking__order-therapist-filter-raiting-star-fill,
+  .booking__order-therapist-filter-raiting-star-noFill
+    width 20px
+    height 20px
+    
+  .booking__order-therapist-cart
+    width 140px
+    margin-top 15px
+    
